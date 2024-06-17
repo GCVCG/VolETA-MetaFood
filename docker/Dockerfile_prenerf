@@ -1,0 +1,26 @@
+FROM gcvcg/pixsfm:latest
+
+# Installing ImageMagick
+RUN apt-get update &&  \
+    apt-get install -y imagemagick
+
+# Installing FFMPEG
+RUN apt install -y ffmpeg
+
+# Installing near-Image similarity algorithim
+RUN python3 -m pip install imagededup
+
+# Installing LLFF dependenceis
+RUN pip3 install scikit-image imageio==2.4.0
+
+RUN python3 -m pip install 'git+https://github.com/facebookresearch/detectron2.git'
+
+RUN python3 -m pip install trimesh
+
+# Bsdtar installation
+RUN apt-get install -y libarchive-tools
+
+# GNU parallel installation
+RUN apt-get -y install parallel
+
+WORKDIR /workspace

@@ -1,0 +1,66 @@
+FROM gcvcg/prenerf:latest
+
+ARG MASTER=0
+ARG USER_ID
+ARG GROUP_ID
+ARG CUDA=0
+
+# COPY ./openMVS/docker/buildInDocker.sh /tmp/buildInDocker.sh
+
+WORKDIR /
+
+# RUN /tmp/buildInDocker.sh --cuda $CUDA --user_id $USER_ID --group_id $GROUP_ID --master $MASTER && rm /tmp/buildInDocker.sh
+
+RUN apt-get update -yq && \
+    apt-get -yq install build-essential git cmake libpng-dev libjpeg-dev libtiff-dev libglu1-mesa-dev libglew-dev libglfw3-dev libssl-dev
+
+RUN git clone https://github.com/cdcseacave/openMVS.git --branch master /openMVS
+
+# Installing CMAKE
+ENV CMAKE_version=3.28
+ENV CMAKE_build=1
+RUN apt remove -y --purge --auto-remove cmake
+
+RUN mkdir -p /installation
+WORKDIR /installation
+RUN wget https://cmake.org/files/v$CMAKE_version/cmake-$CMAKE_version.$CMAKE_build.tar.gz && \
+    tar -xzvf cmake-$CMAKE_version.$CMAKE_build.tar.gz && \
+    cd cmake-$CMAKE_version.$CMAKE_build/ && \
+    ./bootstrap && \
+    make -j$(nproc) && \
+    make install
+
+WORKDIR /openMVS
+RUN git clone https://gitlab.com/libeigen/eigen
+
+WORKDIR /openMVS/eigen
+
+RUN mkdir -p build && cd build && \
+    cmake .. && make && make install
+
+WORKDIR /openMVS
+RUN mkdir make && cd make
+
+RUN apt-get -y install libboost-iostreams-dev libboost-program-options-dev libboost-system-dev libboost-serialization-dev
+
+# OpenCV
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -yq libopencv-dev
+
+# CGAL
+RUN apt-get -yq install libcgal-dev libcgal-qt5-dev
+
+RUN git clone https://github.com/cdcseacave/VCG.git vcglib
+
+# Installing OpenMVS
+RUN cmake . -DCMAKE_BUILD_TYPE=Release -DVCG_ROOT=./vcglib -DOpenMVS_USE_CUDA=ON -DCMAKE_LIBRARY_PATH=/usr/local/cuda/lib64/stubs/ && \
+    make -j$(nproc) && make install && \
+    cp -r bin/* /usr/bin
+
+#USER user
+
+# Add binaries to path
+ENV PATH /usr/local/bin/OpenMVS:$PATH
+
+RUN pip3 install pymeshlab
+
+WORKDIR /workspace
