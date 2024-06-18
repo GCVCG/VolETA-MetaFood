@@ -40,10 +40,74 @@ We are thrilled to announce that our team has won the prestigious Meta Food CVPR
 - [Acknowledgements](#acknowledgements)
 
 -----
-# Proposed Framework
+
+## Introduction
+
+Accurate dietary assessment using 2D images is crucial but challenging due to the need for precise food volume estimation. Our approach addresses these challenges by providing a semi-automated method that is adaptable and user-friendly.
+
+### Challenges in Food Volume Estimation
+
+- **2D Image Limitations**: Lack of depth information in standard 2D images.
+- **Reference Object Methods**: 
+  - Use standard-sized items or specific markers for 3D cues.
+  - Computationally intensive and often impractical.
+- **Non-Reference Object Methods**:
+  - Estimate depth using image features and camera properties.
+  - Variable camera orientations and positions pose limitations.
+
+### Our Contributions
+
+- **Unbounded Food Scenes**:
+  - Flexible camera movement around the food object.
+  - Handles varying capturing speeds and topologies.
+- **Sparse Input Views**:
+  - Requires only one or a few RGBD images.
+
+### Our Framework
 
 ![VolETA](https://github.com/umairharon/VolETA-MetaFood/assets/88880739/36a646eb-d2eb-4c2d-8995-47b223b61c49)
 
 
-# Pipeline:
+## Installation:
 
+To get started, clone this repository:
+
+```bash 
+git clone https://github.com/umairharon/VolETA-MetaFood
+
+```
+
+### Requirements
+
+- Python 3.8+
+- PyTorch 1.10+
+- torchvision
+- numpy
+- pandas
+- scikit-learn
+- matplotlib
+- OpenCV
+
+You can install the required packages using pip:
+
+```bash
+pip install -r requirements.txt
+```
+
+## Submodules
+
+Please note that this project relies on several submodules that are not included in this repository. You must clone and install these submodules from their respective repositories:
+
+1. [Pixel-Perfect Structure-from-Motion with Featuremetric Refinement](https://arxiv.org/pdf/2108.08291)
+      - Repository: [Pixel-Perfect-SfM](https://github.com/cvg/pixel-perfect-sfm)
+
+2. [Segment Anything (SAM)](https://ai.meta.com/research/publications/segment-anything/)
+      - Repository: [Segment-Anything](https://github.com/facebookresearch/segment-anything)
+
+3. [XMem++: Production-level Video Segmentation From Few Annotated Frames](https://arxiv.org/pdf/2307.15958)
+      - Repository: [XMem2](https://github.com/mbzuai-metaverse/XMem2?tab=readme-ov-file)
+
+4. [NeuS2: Fast Learning of Neural Implicit Surfaces for Multi-view Reconstruction](https://arxiv.org/abs/2212.05231)
+      - Repository: [NeuS2](https://github.com/19reborn/NeuS2?tab=readme-ov-file)
+  
+   
