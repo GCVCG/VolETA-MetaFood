@@ -6,7 +6,7 @@ AIBA Lab @ [UB](https://web.ub.edu/web/ub/) (Universitat de Barcelona)
 
 -----
 
-# Winners of Meta Food CVPR Workshop 2024 (Challenge): [Physically Informed 3D Food Reconstruction](https://sites.google.com/view/cvpr-metafood-2024/challenge) {align=center}
+# Winners of Meta Food CVPR Workshop 2024 (Challenge): [Physically Informed 3D Food Reconstruction](https://sites.google.com/view/cvpr-metafood-2024/challenge)
 
 -----
 
