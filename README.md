@@ -1,15 +1,15 @@
 <div align="center">
   <h1>VolETA: One- and Few-shot Food Volume Estimation</h1>
   <p>
-    <a href="https://www.linkedin.com/in/amughrabi/">Ahmad AlMughrabi</a>, 
-    <a href="https://www.linkedin.com/in/umair-haroon-8729611ab">Umair Haroon</a>, 
-    <a href="https://www.linkedin.com/in/ricardo-marques-a3128847/">Ricardo Marques</a>, 
-    <a href="https://www.linkedin.com/in/petia-radeva-71651334/">Petia Radeva</a>
+    <a href="https://www.linkedin.com/in/amughrabi/">Ahmad AlMughrabi*</a>, 
+    <a href="https://www.linkedin.com/in/umair-haroon-8729611ab">Umair Haroon*</a>, 
+    <a href="https://www.linkedin.com/in/ricardo-marques-a3128847/">Ricardo Marques* ¹</a>, 
+    <a href="https://www.linkedin.com/in/petia-radeva-71651334/">Petia Radeva* ²</a>
   </p>
   <p>
-    AIBA Lab @ <a href="https://web.ub.edu/web/ub/">UB</a> (Universitat de Barcelona)
-    Computer Vision Center
-    Institut de Neurosciències
+    AIBA Lab @ <a href="https://web.ub.edu/web/ub/">UB</a> (Universitat de Barcelona)*,
+    Computer Vision Center ¹,
+    Institut de Neurosciències ²
   </p>
 </div>
 
