@@ -109,5 +109,52 @@ Please note that this project relies on several submodules that are not included
 
 4. [NeuS2: Fast Learning of Neural Implicit Surfaces for Multi-view Reconstruction](https://arxiv.org/abs/2212.05231)
       - Repository: [NeuS2](https://github.com/19reborn/NeuS2?tab=readme-ov-file)
-  
-   
+
+## Usage
+
+After installing the necessary packages and submodules, you can run the main script to the Pipeline:
+
+```bash
+python main.py --config configs/config.yaml #Example
+```
+## Methodology
+
+### Data:
+We used the dataset Provided by MetaFood CVPR Workshop Challenge 2024. It consists of 20 food scenes  categorized by difficulty (simple, medium, hard).  
+
+You can download the data from Kaggle: [MTF Challenge Dataset](https://www.kaggle.com/competitions/cvpr-metafood-3d-food-reconstruction-challenge/data)
+
+### Evaluation
+Two-phase evaluation process focusing on precision of reconstructed 3D models in shape and portion size.
+
+#### Phase-I (Portion Size Evaluation):
+- Metric: Mean Absolute Percentage Error (MAPE).
+- Focus: Accuracy of volume estimation of 3D models.
+
+#### Phase-II (Shape Evaluation):
+- Eligibility: Top teams from Phase-I.
+- Requirement: Submission of complete 3D mesh files for each food item.
+- Metric: Chamfer distance.
+- Focus: Accuracy of 3D shape reconstruction.
+
+## Results
+
+### Phase-I
+- MAPE: 0.10973
+
+### Phase-II
+- Chamfer Distance With Transformation Matrix:
+  - Average: 0.007258650766
+  - Sum: 0.13066
+- Chamfer Distance Without Transformation Matrix:
+    - Average: 0.09528961389
+    - Sum: 1.71521
+
+### Visual Results
+
+| ![1](../../../../../home/umairharoon/Pictures/Screenshots/Challenge_Results/BG/1-G.png) | ![2](../../../../../home/umairharoon/Pictures/Screenshots/Challenge_Results/BG/2.png) | ![GIF 3](url3) | ![GIF 4](url4) | ![GIF 5](url5) | ![GIF 6](url6) |
+| -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
+| ![GIF 7](url7) | ![GIF 8](url8) | ![GIF 9](url9) | ![GIF 10](url10) | ![GIF 11](url11) | ![GIF 12](url12) |
+| ![GIF 13](url13) | ![GIF 14](url14) | ![GIF 15](url15) | ![GIF 16](url16) | ![GIF 17](url17) | ![GIF 18](url18) |
+
+    
