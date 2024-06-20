@@ -8,6 +8,8 @@
   </p>
   <p>
     AIBA Lab @ <a href="https://web.ub.edu/web/ub/">UB</a> (Universitat de Barcelona)
+    Computer Vision Center
+    Institut de Neurosciències
   </p>
 </div>
 
@@ -32,10 +34,9 @@ We are thrilled to announce that our team has won the prestigious Meta Food CVPR
 - [Introduction](#introduction)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Methodologies](#methodologies)
+- [Methodology](#methodology)
 - [Submodules](#submodules)
 - [Results](#results)
-- [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
 
@@ -120,12 +121,12 @@ python main.py --config configs/config.yaml #Example
 ## Methodology
 
 ### Data:
-We used the dataset Provided by MetaFood CVPR Workshop Challenge 2024. It consists of 20 food scenes  categorized by difficulty (simple, medium, hard).  
+We used the dataset Provided by MetaFood CVPR Workshop Challenge 2024. It comprises 20 food scenes  categorized by difficulty (simple, medium, hard).  
 
 You can download the data from Kaggle: [MTF Challenge Dataset](https://www.kaggle.com/competitions/cvpr-metafood-3d-food-reconstruction-challenge/data)
 
 ### Evaluation
-Two-phase evaluation process focusing on precision of reconstructed 3D models in shape and portion size.
+A two-phase evaluation process focuses on the precision of reconstructed 3D models in terms of shape and portion size.
 
 #### Phase-I (Portion Size Evaluation):
 - Metric: Mean Absolute Percentage Error (MAPE).
@@ -152,6 +153,14 @@ Two-phase evaluation process focusing on precision of reconstructed 3D models in
 
 ### Visual Results
 
+| ![1](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/da79f623-0cbe-4ff1-bd07-ad230fabd318) | ![2](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/4133aace-0770-4c0c-91fa-5f92e7133904) | ![3](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/54f4c111-9d29-44a8-96b6-a99455e258ba) | ![4](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/dc8f2fc7-b8f0-476d-a5ff-3122a6330f67) | ![5](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/dfb7972d-7687-468f-b572-e45e82808ab6) | ![6](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/ece9a850-4495-4b75-abe5-e5ad706199c8) |
+| -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
+| ![7](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/5467754d-022a-4b3d-9e98-e3e2507c3745) | ![8](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/51e9c2ad-b89c-4960-ad38-3fe93fc20f4f) | ![9](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/464239c2-7ef7-46d7-9180-bde2cf59c263) | ![10](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/25cc7f42-16f6-4b0a-b8c2-fb6d93d463bc) | ![11](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/da9d1f1d-b7da-4c2a-bbaa-fae27464c4be) | ![12](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/e0c63852-026a-476f-8989-11c108ac042f) |
+| ![14](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/c33114cb-9be9-4e3f-b3da-108818d65b13)| ![16](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/8d524726-b24f-4ab5-8613-b3290a986266) | ![17](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/834da62a-6e03-4e68-b87f-1b1741f18079) | ![18](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/5026569f-96cc-49c8-ad99-715d939d0e77) | ![19](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/e195e724-c728-40ef-99c2-d917e7f2788d) | ![20](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/858b4c77-57af-4893-ab2f-c60dd5e4daaa) |
 
+#### Comparison Over Ground Truth
+![Results](https://github.com/GCVCG/VolETA-MetaFood/assets/88880739/abf9cd58-fc0f-490e-992c-3be10a815b93)
+
+## Acknowlegements
 
     
