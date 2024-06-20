@@ -152,9 +152,6 @@ Two-phase evaluation process focusing on precision of reconstructed 3D models in
 
 ### Visual Results
 
-| ![1](../../../../../home/umairharoon/Pictures/Screenshots/Challenge_Results/BG/1-G.png) | ![2](../../../../../home/umairharoon/Pictures/Screenshots/Challenge_Results/BG/2.png) | ![GIF 3](url3) | ![GIF 4](url4) | ![GIF 5](url5) | ![GIF 6](url6) |
-| -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
-| ![GIF 7](url7) | ![GIF 8](url8) | ![GIF 9](url9) | ![GIF 10](url10) | ![GIF 11](url11) | ![GIF 12](url12) |
-| ![GIF 13](url13) | ![GIF 14](url14) | ![GIF 15](url15) | ![GIF 16](url16) | ![GIF 17](url17) | ![GIF 18](url18) |
+
 
     
